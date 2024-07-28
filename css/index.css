@@ -1,0 +1,358 @@
+@import url("./global.css");
+
+.main-btn.showAll {
+  background-color: var(--yellow-color);
+  color: var(--secondary-color);
+  width: 200px;
+  text-align: end;
+  margin-inline: 0;
+  margin-block: 30px;
+}
+
+/* Slider */
+.splide__arrows--rtl .splide__arrow--prev,
+.splide__arrows--rtl .splide__arrow--next {
+  width: 46px;
+  height: 46px;
+  background-color: var(--secondary-color);
+  opacity: 1;
+}
+
+.splide__arrows--rtl .splide__arrow--prev {
+  right: -50px;
+}
+
+.splide__arrows--rtl .splide__arrow--next {
+  left: -50px;
+}
+
+@media (max-width: 991px) {
+  .splide__arrows--rtl .splide__arrow--prev,
+  .splide__arrows--rtl .splide__arrow--next {
+    top: 105%;
+    transform: translateY(0);
+  }
+
+  .splide__arrows--rtl .splide__arrow--prev {
+    right: 40%;
+  }
+
+  .splide__arrows--rtl .splide__arrow--next {
+    left: 40%;
+  }
+}
+
+.splide__arrows--rtl .splide__arrow--prev svg,
+.splide__arrows--rtl .splide__arrow--next svg {
+  fill: #fff;
+}
+.splide__arrow:disabled {
+  opacity: 0.3 !important;
+}
+/* Slider */
+
+/* Main Sections */
+#mainSections #mainSlider .splide__slide{
+  height: fit-content;
+  width: fit-content !important;
+  background: linear-gradient(to top, black 30%, var(--primary-color) 100%);
+  border-radius: 16px;
+  border: 1.5px solid #fff;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+#mainSections #mainSlider .splide__slide:not(:last-of-type){
+  margin-left: -220px;
+}
+
+#mainSections #mainSlider .splide__slide:hover{
+  z-index: 99 !important;
+}
+
+#mainSections #mainSlider .splide__slide div{
+  width: 400px;
+  position: relative;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
+  border-radius: 16px;
+  border: 1.5px solid #fff;
+}
+
+#mainSections #mainSlider .splide__slide div div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 20px;
+  color: white;
+  padding: 0px 20px 170px;
+  align-items: start;
+  font-weight: 600;
+}
+
+#mainSections #mainSlider .splide__slide div div p{
+  width: 250px;
+}
+
+#mainSections #mainSlider .splide__slide div div a{
+  color: white;
+  border: 1px solid #fff;
+  margin-inline: 0;
+  width: 100%;
+}
+
+#mainSections #mainSlider .splide__slide:nth-of-type(1) div{
+  background-image: url('../assets/main-01.jpeg');
+}
+
+#mainSections #mainSlider .splide__slide:nth-of-type(2) div{
+  background-image: url('../assets/main-03.png');
+}
+
+#mainSections #mainSlider .splide__slide:nth-of-type(3) div{
+  background-image: url('../assets/main-03.png');
+}
+
+#mainSections #mainSlider .splide__slide:nth-of-type(4) div{
+  background-image: url('../assets/main-04.png');
+}
+
+#mainSections #mainSlider .splide__slide:nth-of-type(5) div{
+  background-image: url('../assets/main-05.jpeg');
+}
+
+#mainSections #mainSlider .splide__slide:nth-of-type(6) div{
+  background-image: url('../assets/main-01.jpeg');
+}
+/* Main Sections */
+
+/* First Offer */
+#firstOffer {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+#firstOffer img {
+  bottom: -48px;
+  background: radial-gradient(circle, var(--primary-color) 0%, black 70%);
+}
+
+#firstOffer h3 {
+  max-width: 650px;
+}
+
+#firstOffer a {
+  color: white;
+  margin: 0;
+  background-color: var(--primary-color);
+  margin-block: 30px 0;
+  width: 140px;
+}
+
+@media (max-width: 767px) {
+  #firstOffer div:first-child div:first-child {
+    flex-wrap: wrap;
+  }
+
+  #firstOffer .img-container {
+    order: 2;
+  }
+
+  #firstOffer .ellipsis {
+    top: 56%;
+    right: -20%;
+  }
+}
+/* First Offer */
+
+/* Best Seller */
+#bestSellerSlider .splide__slide__container img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+/* Best Seller */
+
+/* League Section */
+#league #leagueSlider a.splide__slide {
+  text-decoration: none;
+}
+
+#league #leagueSlider .content {
+  background: radial-gradient(
+    circle at left center,
+    black -35%,
+    #f1f3f9 -30%,
+    darkred 30%,
+    black 95%
+  );
+  display: flex;
+  color: white;
+  align-items: center;
+  padding: 5px 30px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#league #leagueSlider .content img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+}
+
+#league #leagueSlider .content p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+/* League Section */
+
+/* Sport Section */
+#sport .card-container {
+  position: relative;
+  overflow: hidden;
+  margin-inline: auto;
+  width: fit-content;
+  padding: 5px;
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+#sport .card-container:hover div {
+  transform: translateY(0);
+}
+
+#sport .card-container img {
+  width: 350px;
+  height: 350px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#sport .card-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 15px;
+  position: absolute;
+  z-index: 999;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 5px;
+  bottom: 0;
+  right: 0;
+  transform: translateY(110%);
+  transition: 0.6s ease-in;
+}
+
+#sport .card-container div p {
+  margin-block-start: 5px;
+  max-width: 150px;
+}
+
+#sport .card-container div a {
+  color: #fff;
+  border: 1px solid white;
+  background: transparent;
+}
+/* Sport Section */
+
+/* Second Offer */
+#secondOffer .text-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#secondOffer .text-container h3 {
+  max-width: 560px;
+}
+
+/* Second Offer */
+
+/* Design Section */
+#design .card-container {
+  border-radius: 16px;
+  box-shadow: 2px 2px 7px #eee;
+}
+
+#design .card-container span {
+  color: white;
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 900;
+  -webkit-text-stroke: 8px var(--yellow-color);
+}
+
+#design .card-container .text a {
+  position: relative;
+  color: white;
+  margin-inline: 0;
+  background: var(--secondary-color);
+}
+
+#design .card-container .text a::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -35px;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.57);
+  border-radius: 50%;
+}
+/* Design Section */
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+}
+
+footer h5 {
+  margin-bottom: 10px;
+}
+
+footer .nav-link {
+  padding-inline-start: 0;
+  color: #fafafa;
+  font-weight: 400;
+}
+
+footer form {
+  border: 1.5px solid #fff;
+  padding: 12px 0 12px 16px;
+}
+
+footer form input {
+  border: none;
+  background: transparent;
+  max-width: 100%;
+  width: 100%;
+  padding-inline-start: 15px;
+  color: #fff;
+}
+
+footer form input:focus {
+  outline: none;
+}
+
+footer #social-media-links li a {
+  color: #fff;
+}
+
+footer #social-media-links li a:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+/* Footer */
